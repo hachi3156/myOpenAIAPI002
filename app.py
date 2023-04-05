@@ -3,9 +3,7 @@
 import openai
 import streamlit as st
 
-import secret_keys
-
-openai.api_key = secret_keys.openai_api_key
+openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
